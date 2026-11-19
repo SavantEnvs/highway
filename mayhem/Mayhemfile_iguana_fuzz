@@ -1,0 +1,11 @@
+project: savantenvs/highway
+target: iguana_fuzz
+
+cmds:
+  - cmd: /mayhem/iguana_fuzz
+    libfuzzer: true
+    timeout: 10
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/iguana_fuzz/testsuite

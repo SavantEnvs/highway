@@ -1,0 +1,11 @@
+project: savantenvs/highway
+target: range_coder_fuzz
+
+cmds:
+  - cmd: /mayhem/range_coder_fuzz
+    libfuzzer: true
+    timeout: 10
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/range_coder_fuzz/testsuite

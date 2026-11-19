@@ -1,0 +1,11 @@
+project: savantenvs/highway
+target: ans_fuzz
+
+cmds:
+  - cmd: /mayhem/ans_fuzz
+    libfuzzer: true
+    timeout: 10
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/ans_fuzz/testsuite
